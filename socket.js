@@ -4,7 +4,7 @@ require('dotenv').config();
 const server = http.createServer();
 let onlineUsers = []
 const io = new Server(server,{
-    cors : 'http://localhost:3000/chat',
+    cors : 'https://chat-app-client-gamma-two.vercel.app/chat', //client endpoint
     methods: ['GET', 'POST']
 });
 io.on("connection", (socket) =>{
